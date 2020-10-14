@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'edxconnect.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'edxconnect',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',  # machine localhost
+        'PORT': '3506',  # port mapping to local tcp in devstack sql container
     }
 }
 
