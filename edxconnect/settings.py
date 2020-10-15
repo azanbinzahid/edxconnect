@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'edxorgs'
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,8 @@ WSGI_APPLICATION = 'edxconnect.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
+
+DATABASE_ROUTERS = ['edxorgs.routers.db_Router']
 
 DATABASES = {
     'default': {
