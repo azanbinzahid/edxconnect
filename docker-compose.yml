@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  edxconnect:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/edxconnect
+    ports:
+      - "8000:8000"
+networks:
+  default:
+    external:
+      name: devstack_default

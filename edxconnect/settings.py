@@ -79,8 +79,16 @@ DATABASES = {
         'NAME': 'edxconnect',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': '127.0.0.1',  # machine localhost
-        'PORT': '3506',  # port mapping to local tcp in devstack sql container
+        'HOST': 'edx.devstack.mysql',
+        'PORT': '3306',
+    },
+    'edxappdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'edxapp',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'edx.devstack.mysql',
+        'PORT': '3306',
     }
 }
 
